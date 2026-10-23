@@ -42,7 +42,6 @@ public class MainClass {
 		}
 		// 더미 끝
 		
-		
 		while (systemFlag) {
 			System.out.println("1.SIGN-UP    2.SIGN-IN    3.MODIFY    4.DELETE    99.END");
 			
@@ -91,7 +90,7 @@ public class MainClass {
 				memberPW = scanner.next();
 							
 				memberInfos = members.get(memberID);
-				System.out.println("memberInfos:"+ memberInfos); //searchedMember:[Ljava.lang.String;@7cf10a6f
+				System.out.println("memberInfos:"+ memberInfos); //memberInfos:[Ljava.lang.String;@7cf10a6f
 				
 				if (memberInfos != null && memberInfos[1].equals(memberPW)) {
 
