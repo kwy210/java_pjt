@@ -13,7 +13,7 @@ public class MainClass {
 		 */
 		
 		
-		Student student1 = new Student("홍길동", 0, new Car("white", "123가4567"));
+		Student student1 = new Student("홍길동", 22, new Car("white", "123가4567"));
 		
 		student1.printInfo();
 		
