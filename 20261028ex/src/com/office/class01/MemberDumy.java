@@ -12,7 +12,7 @@ public class MemberDumy {
         this.db = memberDB;
     }
 
-    // 테스트용 회원 데이터 초기화
+    // 과제: 테스트용 회원 데이터 초기화 하기
     public void initMemberDumyData() {
 
         System.out.println("[MemberDumy] initMemberDumyData()");
