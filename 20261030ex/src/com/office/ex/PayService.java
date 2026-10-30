@@ -1,6 +1,10 @@
 package com.office.ex;
 /*
  * 월급 지급 명령을 내린다.
+ * 
+ * 월급 지급 처리 프로그램
+ * 
+ * 누적된 급여 지급 횟수
  */
 public class PayService {
 
@@ -28,6 +32,14 @@ public class PayService {
 		chajang.pay();
 		
 		System.out.println(month + "월 급여 지급 완료.");
+		
+		PayCount.getPayCountInstance().setCnt();
+		
+		//누적 급여 횟수 출력
+		
+		int cnt = PayCount.getPayCountInstance().getCnt();
+		System.out.println(cnt + "누적 급여 횟수.");
+		
 	}
 	
 	
