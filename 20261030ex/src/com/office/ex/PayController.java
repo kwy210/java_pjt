@@ -26,7 +26,7 @@ public class PayController {
 			} else if(thisMonth == 0) {
 				
 			System.out.println("시스템 종료");
-			scanner.close();
+			scanner.close();z
 			}
 		
 	
