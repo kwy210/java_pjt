@@ -2,7 +2,6 @@ package com.office.ex;
 
 public class ChineseRestaurant extends ParentRestaurant{
 	
-	
 	/*
 	public void open() {
 		System.out.println("영업 시작!");
