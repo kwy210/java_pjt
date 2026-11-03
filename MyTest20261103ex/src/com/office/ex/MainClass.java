@@ -9,7 +9,7 @@ public class MainClass {
 		chineseRestaurant.open();
 		chineseRestaurant.close();
 		//chineseRestaurant.makeJajang();
-		chineseRestaurant.stertCooking();
+		chineseRestaurant.startCooking();
 		
 		System.out.println("------------------------------");
 		
@@ -18,7 +18,7 @@ public class MainClass {
 		koreanRestaurant.open();
 		koreanRestaurant.close();
 		//koreanRestaurant.makeBibimbap();
-		koreanRestaurant.stertCooking();
+		koreanRestaurant.startCooking();
 		
 	}
 	

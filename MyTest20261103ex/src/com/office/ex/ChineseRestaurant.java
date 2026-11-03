@@ -17,7 +17,7 @@ public class ChineseRestaurant extends ParentRestaurant{
 		System.out.println("짜장 만들기!");
 	}
 	
-	public void stertCooking() {
+	public void startCooking() {
 		makeJajang();
 	}
 	

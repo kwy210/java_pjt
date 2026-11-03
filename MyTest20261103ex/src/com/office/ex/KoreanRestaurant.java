@@ -27,7 +27,7 @@ public class KoreanRestaurant extends ParentRestaurant{
 		System.out.println("비빔밥 만들기!");
 	}
 	
-	public void stertCooking() {
+	public void startCooking() {
 		makeBibimbap();
 	}
 	
