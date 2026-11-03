@@ -21,7 +21,7 @@ public class MainClass {
 				new ChildRestaurant();
 		
 		
-		childRestaurant.makeJajang(ChildRestaurant.CHILD_MENU);  // true: 아들꺼  false : 아빠꺼
+		childRestaurant.makeJajang(2);  // true: 아들꺼  false : 아빠꺼
 		childRestaurant.makeJjamppong();
 		childRestaurant.makeBokkeumbap();
 		childRestaurant.makeTangsuyuk();
