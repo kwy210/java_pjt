@@ -102,7 +102,6 @@ public class MemberController implements MemberConfig {
 				}
 				
 				
-				memberService.modify();
 				
 				break;
 				

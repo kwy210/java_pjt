@@ -7,7 +7,7 @@ public class DiaryDto {
 	public DiaryDto() {}
 	
 	public DiaryDto(String txt) {
-		// TODO Auto-generated constructor stub
+		this.txt = txt;
 	}
 
 	public String getTxt() {
@@ -17,6 +17,6 @@ public class DiaryDto {
 	public void setTxt(String txt) {
 		this.txt = txt;
 	}
-	
+
 	
 }

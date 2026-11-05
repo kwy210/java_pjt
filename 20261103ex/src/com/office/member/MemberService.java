@@ -52,7 +52,8 @@ public class MemberService implements IMemberService{
 	@Override
 	public void modify(MemberDto memberDto) {
 		
-		memberDao.updatedMemberByMemId(memberDto);
+		MemberDto updatedMemberByMemId=
+				memberDao.updatedMemberByMemId(memberDto);
 		
 		if (updatedMemberByMemId != null) {
 			System.out.println("정보 변경 성공");

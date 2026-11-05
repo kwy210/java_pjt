@@ -28,12 +28,14 @@ public class DiaryController implements IDiaryConfig {
 				String txt = scanner.nextLine();
 				
 				DiaryDto diaryDto =new DiaryDto(txt);
-				diaryDto.insertDiary(DiaryDto);
 				
-				diaryService.writeNewDiary();
+				diaryService.writeNewDiary(diaryDto);
 				
 				break;
+				
 			case DIARY_READ:
+				
+				diaryService.readDiaries();
 				
 				break;
 			case SYSTEM_OUT:
