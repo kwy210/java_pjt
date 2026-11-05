@@ -16,7 +16,6 @@ public class MemberDao {
 //			return false;
 //		}
 //		
-		
 		return memberDto != null ? true : false;  
 		
 	}
@@ -48,6 +47,7 @@ public class MemberDao {
 		
 		if (dto != null && dto.getMemPw().equals(memberDto.getMemPw())) {
 			MemberDto deletedMemberDto = db.remove(memberDto.getMemId());
+			
 			if (deletedMemberDto != null) {
 				return deletedMemberDto;
 			} else {
@@ -55,12 +55,18 @@ public class MemberDao {
 			}
 			
 			
-		} else {
-			return null;
-		}
+			} else {
+				return null;
+			}
 
 		
 		
+		
+	}
+
+	public void updatedMemberByMemId(MemberDto memberDto) {
+		db.put(memberDto.getMemId(), memberDto);
+		return db.get(memberDto.getMemId())
 		
 	}
 
