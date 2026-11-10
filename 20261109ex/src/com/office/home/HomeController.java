@@ -8,7 +8,7 @@ import com.office.menu.Menu;
 
 public class HomeController {
 
-	private static final int MEMBER_DELETE = 0;
+	
 
 	public void execute() {
 
@@ -44,10 +44,9 @@ public class HomeController {
 		
 		
 		}
-		
-		
-		
+
 		scanner.close();
+		
 	}
 
 }

@@ -5,6 +5,9 @@ public class DiaryDto {
 	private String diaryTitle;
 	private String diaryBody;
 	
+	public DiaryDto() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public DiaryDto(String diaryTitle, String diaryBody) {
 		super();
@@ -12,6 +15,15 @@ public class DiaryDto {
 		this.diaryBody = diaryBody;
 	}
 
+	
+
+	public String getDiaryTitle() {
+		return diaryTitle;
+	}
+
+	public String getDiaryBody() {
+		return diaryBody;
+	}
 
 	public void setDiaryTitle(String diaryTitle) {
 		this.diaryTitle = diaryTitle;

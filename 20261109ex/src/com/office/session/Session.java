@@ -19,7 +19,7 @@ public class Session {
 		return session;
 	}
 
-	public Object getAttribut(String name) {
+	public Object getAttribute(String name) {
 		return attributies.get(name);
 	}
 	

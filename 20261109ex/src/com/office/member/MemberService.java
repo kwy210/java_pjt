@@ -54,7 +54,7 @@ public class MemberService {
 	public MemberDto getMember() {
 		
 		return memberDao.selectMemberByMemId(
-				String.valueOf(Session.getInstance().getAttribut(Config.SIGINED_MEMBER_ID))  
+				String.valueOf(Session.getInstance().getAttribute(Config.SIGINED_MEMBER_ID))  
 				);
 		
 	}

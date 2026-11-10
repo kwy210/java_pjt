@@ -96,7 +96,7 @@ public class MemberController {
 		
 		int reultForModify =
 				memberService.modify(new MemberDto(
-						String.valueOf(Session.getInstance().getAttribut(Config.SIGINED_MEMBER_ID)),
+						String.valueOf(Session.getInstance().getAttribute(Config.SIGINED_MEMBER_ID)),
 						memPw,
 						memMail,
 						memPhone));
@@ -112,12 +112,12 @@ public class MemberController {
 		case Menu.MEMBER_DELETE:
 			
 		int reultForDelete = memberService.delete(
-				String.valueOf(Session.getInstance().getAttribut(Config.SIGINED_MEMBER_ID))
+				String.valueOf(Session.getInstance().getAttribute(Config.SIGINED_MEMBER_ID))
 				);
 			
 			if (reultForDelete == MemberService.DELETE_SUCCESS) {
 				System.out.println("삭제 성공");
-				Session.getInstance().getAttribut(Config.SIGINED_MEMBER_ID);
+				Session.getInstance().getAttribute(Config.SIGINED_MEMBER_ID);
 				
 			}else {
 				System.out.println("삭제 실패");
