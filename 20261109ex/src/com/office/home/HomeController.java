@@ -1,12 +1,10 @@
 package com.office.home;
 
-import java.nio.channels.Selector;
-import java.util.HashMap;
+
 import java.util.Scanner;
 
 import com.office.Container;
 import com.office.menu.Menu;
-import com.office.session.Session;
 
 public class HomeController {
 
@@ -19,21 +17,17 @@ public class HomeController {
 		
 		while (systemFlag) {
 			
-			Menu.generateMenu();
+		Menu.generateMenu();
 			
 		int selectedMenu = scanner.nextInt();
 			
 		switch (selectedMenu) {
 		case Menu.MEMBER_SIGN_UP:
-		
 		case Menu.MEMBER_SIGN_IN:
-		
 		case Menu.MEMBER_SIGN_OUT:
-		
-		case Menu.MEMBER_MODIFY:
-		
-		case MEMBER_DELETE:
-		Container.getInstance().getMemberController().execute(scanner, selectedMenu);
+		case Menu.MEMBER_MODIFY:	
+		case Menu.MEMBER_DELETE:
+			Container.getInstance().getMemberController().execute(scanner, selectedMenu);			
 			break;
 		
 		case Menu.DIARY_READ:

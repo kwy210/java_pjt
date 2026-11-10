@@ -7,9 +7,12 @@ public class MemberDto {
 	private String memPw;
 	private String memMail;
 	private String memPhone;
+	private boolean active = true;
 	
-	
-	
+	public MemberDto() {
+		
+	}
+
 	
 	public MemberDto(String memId, String memPw, String memMail, String memPhone) {
 		super();
@@ -19,10 +22,7 @@ public class MemberDto {
 		this.memPhone = memPhone;
 	}
 	
-	public MemberDto() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	public String getMemId() {
 		return memId;
 	}

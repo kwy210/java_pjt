@@ -2,6 +2,7 @@ package com.office.member;
 
 import java.util.Scanner;
 
+import com.office.config.Config;
 import com.office.menu.Menu;
 import com.office.session.Session;
 
@@ -40,10 +41,10 @@ public class MemberController {
 					new MemberDto(memId, memPw, memMail, memPhone));
 			
 			if (resultForSignUp == MemberService.SIGN_UP_SUCCESS) {
-				System.out.println("SIGN_SUCESS");
+				System.out.println("회원가입 성공");
 				
 			} else {
-				System.out.println("SIGN_FAIL");
+				System.out.println("회원가입 실");
 			}
 					
 			break;
@@ -58,24 +59,69 @@ public class MemberController {
 					new MemberDto(memId,memPw,null,null));
 			
 		  if(singnedMemberDto != null) {
-			System.out.println("성공");  
+			System.out.println("로그인 성공");  
 			Session.getInstance().
-			setAttribute("signInedMemberId",
-						singnedMemberDto.getMemId());
+			setAttribute(
+					Config.SIGINED_MEMBER_ID ,
+					singnedMemberDto.getMemId());
 			
 		  } else {
-			System.out.println("실패"); 
+			System.out.println("로그인 실패"); 
 		  } 
 		  
 			break;
+			
 		case Menu.MEMBER_SIGN_OUT:
-			;
+			
+			Session.getInstance().removeAttribute(Config.SIGINED_MEMBER_ID);
+			
 			break;
 		case Menu.MEMBER_MODIFY:
 			
+		MemberDto sinMemberDto = memberService.getMember();
+			
+		System.out.println("MemberID: "+ sinMemberDto.getMemId());
+		System.out.println("MemberPW: "+ sinMemberDto.getMemPw());
+		System.out.println("MemberMail: "+ sinMemberDto.getMemMail());
+		System.out.println("MemberPhone: "+ sinMemberDto.getMemPhone());
+		
+		System.out.println("Input  member new PW");
+		memPw = scanner.next();
+		
+		System.out.println("Input  member new MAIL");
+		memMail = scanner.next();
+				
+		System.out.println("Input  member new PHONE");
+		memPhone = scanner.next();
+		
+		int reultForModify =
+				memberService.modify(new MemberDto(
+						String.valueOf(Session.getInstance().getAttribut(Config.SIGINED_MEMBER_ID)),
+						memPw,
+						memMail,
+						memPhone));
+		
+				
+		if (reultForModify == MemberService.MODIFY_SUCCESS) {
+			System.out.println("변경 성공");
+		}else {
+			System.out.println("변경 실패");
+		}
+				
 			break;
 		case Menu.MEMBER_DELETE:
 			
+		int reultForDelete = memberService.delete(
+				String.valueOf(Session.getInstance().getAttribut(Config.SIGINED_MEMBER_ID))
+				);
+			
+			if (reultForDelete == MemberService.DELETE_SUCCESS) {
+				System.out.println("삭제 성공");
+				Session.getInstance().getAttribut(Config.SIGINED_MEMBER_ID);
+				
+			}else {
+				System.out.println("삭제 실패");
+			}
 			break;
 
 		}
@@ -83,9 +129,6 @@ public class MemberController {
 	}
 
 
-	public void execute(Scanner scanner, int selectedMenu) {
-		
-		
-	}
+	
 	
 }

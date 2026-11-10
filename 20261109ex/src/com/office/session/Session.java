@@ -19,8 +19,8 @@ public class Session {
 		return session;
 	}
 
-	public HashMap<String, Object> getAttributies() {
-		return attributies;
+	public Object getAttribut(String name) {
+		return attributies.get(name);
 	}
 	
 	//키 벨류 값 넣는 겟터
