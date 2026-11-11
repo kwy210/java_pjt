@@ -14,12 +14,21 @@ public class MainClass {
 		 */
 		try{
 			System.out.println("num1 / num2 = " + (num1 / num2)); // Exception 발생 이 아래로는 실행 X
-				//Exception 은 최상위 클레스
-		} catch (Exception e) {
-//		System.out.println(e.getMessage());	
 			
+			//Exception 은 최상위 클레스
+		} catch (NullPointerException e) {
+		//	System.out.println(e.getMessage());	// 대충 보여줌
+			e.printStackTrace(); // 디테일 하게 보여줌
+			
+		} catch (ArithmeticException e) {
+			System.out.println("Fire ArithmeticException");
 			e.printStackTrace();
 			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			System.out.println("finally 실행");
 		}
 		
 		System.out.println("num1 - num2 = " + (num1 - num2)); // 10
